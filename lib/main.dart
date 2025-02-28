@@ -11,7 +11,7 @@ import 'package:task_management/domain/user_model.dart';
 
   void main() async {
     WidgetsFlutterBinding.ensureInitialized();
-    runApp(AppLoader()); // ✅ Ensure the app starts
+    runApp(AppLoader()); 
   }
 
 
@@ -38,7 +38,7 @@ class _AppLoaderState extends State<AppLoader> {
 
     List<User> users = [];
     if (isLoggedIn) {
-      users = await taskRepository.fetchUsers(); // ✅ Fetch users before navigating
+      users = await taskRepository.fetchUsers(); 
     }
 
     return {"isLoggedIn": isLoggedIn, "users": users};
